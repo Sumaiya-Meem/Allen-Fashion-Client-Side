@@ -14,11 +14,11 @@ const Footer = () => {
 
     </>
     return (
-        <div className="mt-6">
+        <div className="mt-6 ">
             <div className="hero " style={{ backgroundImage: `url(${footerImg})` }}>
                 <div className="hero-overlay bg-opacity-80"></div>
                 <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md flex ite gap-72 items-center">
+                    <div className="max-w-md flex flex-col lg:flex-row ite gap-2 items-center">
                        <div>
                        <a className="capitalize text-4xl font-semibold  text-white">A<span className="text-[#FF444A]">L</span>LEN</a>
                        </div>
