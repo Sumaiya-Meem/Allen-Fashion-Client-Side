@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import AddProducts from "../Pages/AddProducts/AddProducts";
 import ErrorPages from "../Pages/ErrorPages/ErrorPages";
 import MyCarts from "../Pages/MyCarts/MyCarts";
+import DisplayBrandProducts from "../components/DisplayBrandProducts/DisplayBrandProducts";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             element: <MyCarts></MyCarts>,
   
         },
+        {
+            path: "/products/:brand_name",
+            element: <DisplayBrandProducts></DisplayBrandProducts>,
+          },
         
       ],
     },
