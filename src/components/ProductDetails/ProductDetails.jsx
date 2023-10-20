@@ -1,36 +1,76 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { FcRating } from 'react-icons/fc';
+import { useContext } from "react";
+import { AuthContext } from "../../Context/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const ProductDetails = () => {
+    const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
+    // console.log(user.email);
+ 
     const selectedUpdateProduct=useLoaderData();
-    console.log(selectedUpdateProduct)
+    // console.log(selectedUpdateProduct)
+    const {name,brandName,type,price,rating,image,description}=selectedUpdateProduct
+
+   
+    const products={
+        name,brandName,type,description,price,rating,image,userEmail: user.email
+    }
+    console.log(products);
+
+    const handleCart=()=>{
+        fetch('http://localhost:5000/addCart', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(products),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire(
+                        'Product add to your cart',
+                        'success'
+                    );
+                  
+                }
+                navigate('/');
+            })
+    }
+
     
     return (
         <div className="flex justify-center ">
             <div className="card max-w-[600px] h-auto shadow-xl mt-10 bg-[#f2ddd8]">
-                                <figure><img src={selectedUpdateProduct.image} alt="" className="w-[60%] rounded-lg"/></figure>
+                                <figure><img src={image} alt="" className="w-[60%] rounded-lg"/></figure>
                                 <div className="card-body">
                                     
-                                    <h2 className="text-xl ">Name: <span className="font-semibold">{selectedUpdateProduct.name}</span></h2>
-                                    <h2 className="text-xl ">Brand Name: <span className="font-semibold">{selectedUpdateProduct.brandName}</span></h2>
-                                    <p className="text-xl ">Description:  <span className="text-[#706f6f]">{selectedUpdateProduct.description}</span></p>
-                                    <p className="text-xl ">Type: <span className="font-semibold"> {selectedUpdateProduct.type}</span></p>
-                                   <p className="text-xl ">Price:  <span className="font-semibold">${selectedUpdateProduct.price}</span></p>
+                                    <div className="flex justify-between">
+                                        <h2 className="text-xl ">Name: <span className="font-semibold text-[#10ac84]">{name}</span></h2>
+                                    <h2 className="text-xl ">Brand Name: <span className="font-semibold text-[#10ac84]">{brandName}</span></h2>
+                                    </div>
+                                    <div className="flex justify-between">
+                                    <p className="text-xl ">Type: <span className="font-semibold text-[#10ac84]"> {type}</span></p>
+                                   <p className="text-xl ml-44">Price:  <span className="font-semibold text-[#10ac84]">${price}</span></p>
+                                    </div>
+                                    <p className="text-xl ">Description:  <span className="text-[#706f6f]">{description}</span></p>
+                                    
                                   
                                    <div className="flex">
-                                            {Array.from({ length: selectedUpdateProduct.rating }, (_, index) => (
+                                            {Array.from({ length: rating }, (_, index) => (
                                                 <FcRating key={index} />
                                             ))}
                                         </div>
-                                    <div className="flex justify-between">
-                                    <Link >
-                                        <button className="btn bg-[#10ac84] text-white">Add to Cart</button>
-                                    </Link>
+                                    <div className="flex justify-center">
+                                    
+                                        <button className="btn bg-[#10ac84] hover:bg-[#10ac84] text-white" onClick={handleCart}>Add to Cart</button>
+                                 
 
-                                        <Link >
-                                        <button className="btn bg-[#01a3a4] text-white">Delete</button>
-                                        </Link>
+                                        
                                     </div>
                                 </div>
             </div>

@@ -59,7 +59,7 @@ const DisplayBrandProducts = () => {
                         <div key={product._id}>
 
                             
-                            <div className="card h-[450px] bg-base-100 shadow-xl ">
+                            <div className="card h-[500px]  shadow-xl bg-[#fcf4f2]">
                                 <figure><img src={product.image} alt="" className="w-[90%] rounded-lg"/></figure>
                                 <div className="card-body">
                                     
@@ -75,11 +75,11 @@ const DisplayBrandProducts = () => {
                                         </div>
                                     <div className="flex justify-between">
                                     <Link to={`/detailsProducts/${product._id}`}>
-                                        <button className="btn bg-[#10ac84] text-white">View Details</button>
+                                        <button className="btn bg-[#10ac84] hover:bg-[#10ac84] text-white">View Details</button>
                                     </Link>
 
                                         <Link to={`/updateProduct/${product._id}`}>
-                                        <button className="btn bg-[#01a3a4] text-white">Update</button>
+                                        <button className="btn bg-[#01a3a4] hover:bg-[#10ac84] text-white">Update</button>
                                         </Link>
                                     </div>
                                 </div>

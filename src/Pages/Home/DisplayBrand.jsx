@@ -8,7 +8,7 @@ const DisplayBrand = ({ brand }) => {
     const { brand_logo, brand_name } = brand;
 
     return (
-        <div className="w-[120px] lg:w-[200px] h-[120px] bg-[#f2ddd8]">
+        <div className="w-[120px] lg:w-[200px] h-[120px] ">
             <Link to={`/products/${brand_name}`} key={brand.id}>
                 <div className=" text-center shadow-lg rounded-lg">
                     <div className="flex justify-center items-center">
