@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import DisplayBrand from "./DisplayBrand";
-
 const Home = () => {
+    
     const loadedBrands =useLoaderData();
     // console.log(loadedBrands);
     return (
