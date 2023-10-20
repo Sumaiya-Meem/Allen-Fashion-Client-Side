@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "brand_name": "Levi's",
+        "brand_name": "Levis",
         "brand_logo": "../src/assets/brandsImages/levilogo.png",
         "brand_image": [
             "../src/assets/brandsImages/levi1.jpeg",

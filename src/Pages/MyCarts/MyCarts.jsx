@@ -1,22 +1,26 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FcRating } from 'react-icons/fc';
 import Swal from "sweetalert2";
 
 const MyCarts = () => {
+
+    
+
     const { user } = useContext(AuthContext);
     const userEmail = user.email;
 
-    const loadedCartProduct = useLoaderData();
+    const cartProduct = useLoaderData();
     // console.log(loadedCartProduct);
+    const [loadedCartProduct,setLoadedCartProduct]=useState(cartProduct);
 
     const userCartProducts = loadedCartProduct.filter((product) => product.userEmail === userEmail);
 
     // console.log(userCartProducts)
 
     const handleDelete = (_id) => {
-        // console.log(_id)
+        console.log(_id)
 
         Swal.fire({
             title: 'Are you sure?',
@@ -34,12 +38,14 @@ const MyCarts = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data)
-                        // if (data.deletedCount > 0) {
-                        //       Swal.fire(
-                        //         'Deleted!',
-                        //         'success'
-                        //       )
-                        // }
+                        const cartProductWithoutDelete =loadedCartProduct.filter((products)=>products._id!==_id) 
+                        setLoadedCartProduct(cartProductWithoutDelete )
+                        if (data.deletedCount > 0) {
+                              Swal.fire(
+                                'Deleted!',
+                                'success'
+                              )
+                        }
                     })
             }
         })
