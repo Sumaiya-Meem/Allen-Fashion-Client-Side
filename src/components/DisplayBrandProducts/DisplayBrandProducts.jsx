@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { FcRating } from 'react-icons/fc';
 
 const DisplayBrandProducts = () => {
@@ -8,7 +8,8 @@ const DisplayBrandProducts = () => {
     const loadedProducts = useLoaderData();
 
     const selectedBrandProducts = loadedProducts.filter((product) => product.brandName === brand_name);
-
+    
+    
 
     useEffect(() => {
         fetch('../../../public/brandsData.json')
@@ -57,6 +58,7 @@ const DisplayBrandProducts = () => {
                     (selectedBrandProducts.map((product) => (
                         <div key={product._id}>
 
+                            
                             <div className="card h-[450px] bg-base-100 shadow-xl ">
                                 <figure><img src={product.image} alt="" className="w-[90%] rounded-lg"/></figure>
                                 <div className="card-body">
@@ -72,11 +74,17 @@ const DisplayBrandProducts = () => {
                                             ))}
                                         </div>
                                     <div className="flex justify-between">
+                                    <Link to={`/detailsProducts/${product._id}`}>
                                         <button className="btn bg-[#10ac84] text-white">View Details</button>
+                                    </Link>
+
+                                        <Link to={`/updateProduct/${product._id}`}>
                                         <button className="btn bg-[#01a3a4] text-white">Update</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
+                            
                             
                         </div>
                     )))
