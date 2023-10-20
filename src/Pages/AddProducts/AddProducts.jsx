@@ -29,10 +29,10 @@ const AddProducts = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                // if (data.insertedId) {
-                //     alert('products add successfully');
-                //     // form.reset();
-                // }
+                if (data.insertedId) {
+                    alert('products add successfully');
+                    form.reset();
+                }
             })
         
     }
