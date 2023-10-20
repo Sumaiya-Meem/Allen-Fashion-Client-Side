@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { FcRating } from 'react-icons/fc';
 
 const DisplayBrandProducts = () => {
     const { brand_name } = useParams();
@@ -49,21 +50,42 @@ const DisplayBrandProducts = () => {
             </div>
 
             <div className="mt-10">
-            <h1 className="flex justify-center text-2xl font-semibold mb-8 text-[#da5555]">Products</h1>
-          
-            {selectedBrandProducts.length > 0 ? 
-                 (selectedBrandProducts.map((product) => (
-                    <div key={product._id}>
-                        <p>Brand Name: {product.brandName}</p>
-                        <p>Price: {product.price}</p>
-                        <img src={product.image} alt="" />
-                    </div>
-                ))) 
-            : 
-            (
-                
-               <h1 className="text-2xl flex justify-center">No products found for the brand: {brand_name}</h1>
-            )}
+                <h1 className="flex justify-center text-2xl font-semibold mb-8 text-[#da5555]">Products</h1>
+
+               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+               {selectedBrandProducts.length > 0 ?
+                    (selectedBrandProducts.map((product) => (
+                        <div key={product._id}>
+
+                            <div className="card h-[450px] bg-base-100 shadow-xl ">
+                                <figure><img src={product.image} alt="" className="w-[90%] rounded-lg"/></figure>
+                                <div className="card-body">
+                                    
+                                    <h2 className="text-xl ">Name: <span className="font-semibold">{product.name}</span></h2>
+                                    <h2 className="text-xl ">Brand Name: <span className="font-semibold">{product.brandName}</span></h2>
+                                    <p className="text-xl ">Type: <span className="font-semibold"> {product.type}</span></p>
+                                   <p className="text-xl ">Price:  <span className="font-semibold">${product.price}</span></p>
+                                  
+                                   <div className="flex">
+                                            {Array.from({ length: product.rating }, (_, index) => (
+                                                <FcRating key={index} />
+                                            ))}
+                                        </div>
+                                    <div className="flex justify-between">
+                                        <button className="btn bg-[#10ac84] text-white">View Details</button>
+                                        <button className="btn bg-[#01a3a4] text-white">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    )))
+                    :
+                    (
+
+                        <h1 className="text-2xl flex justify-center">No products found for the brand: {brand_name}</h1>
+                    )}
+               </div>
             </div>
 
         </div>
