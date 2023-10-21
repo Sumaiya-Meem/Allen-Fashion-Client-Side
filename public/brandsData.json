@@ -2,61 +2,61 @@
     {
         "id": 1,
         "brand_name": "Gucci",
-        "brand_logo": "../src/assets/brandsImages/guccilogo.png",
+        "brand_logo": "https://i.ibb.co/J2tfzjN/gucci.png",
         "brand_image": [
-            "../src/assets/brandsImages/gucci6.jpeg",
-            "../src/assets/brandsImages/gucci5.jpeg",
-            "../src/assets/brandsImages/gucci4.jpeg"
+            "https://i.ibb.co/FqRD35g/guccip5.jpg",
+            "https://i.ibb.co/pjKdH1r/guccip3.jpg",
+            "https://i.ibb.co/qCPTFhX/gucci3.png"
         ]
     },
     {
         "id": 2,
         "brand_name": "Nike",
-        "brand_logo": "../src/assets/brandsImages/nikelogo.png",
+        "brand_logo": "https://i.ibb.co/z8HqZLh/nikelogo.png",
         "brand_image": [
-            "../src/assets/brandsImages/nike1.png",
-            "../src/assets/brandsImages/nike2.jpeg",
-            "../src/assets/brandsImages/nike3.jpeg"
+            "https://i.ibb.co/48jzWxB/nike2.jpg",
+            "https://i.ibb.co/mRQNHPd/nike1.png",
+            "https://i.ibb.co/z8HqZLh/nikelogo.png"
         ]
     },
     {
         "id": 3,
         "brand_name": "Adidas",
-        "brand_logo": "../src/assets/brandsImages/adidaslogo.png",
+        "brand_logo": "https://i.ibb.co/hXMb0Hm/adidaslogo.png",
         "brand_image": [
-            "../src/assets/brandsImages/adidas1.png",
-            "../src/assets/brandsImages/adidas2.jpeg",
-            "../src/assets/brandsImages/adidas3.jpeg"
+            "https://i.ibb.co/Htxq4BP/adidas2.jpg",
+            "https://i.ibb.co/10k1f8Z/adidas3.jpg",
+            "https://i.ibb.co/hXMb0Hm/adidaslogo.png"
         ]
     },
     {
         "id": 4,
         "brand_name": "Zara",
-        "brand_logo": "../src/assets/brandsImages/zaralogo.png",
+        "brand_logo": "https://i.ibb.co/pQwj2QF/zaralogo.png",
         "brand_image": [
-            "../src/assets/brandsImages/zara1.png",
-            "../src/assets/brandsImages/zara2.jpeg",
-            "../src/assets/brandsImages/zara3.jpeg"
+            "https://i.ibb.co/CBB2RpD/zara3.jpg",
+            "https://i.ibb.co/vL6NwVD/zara2.jpg",
+            "https://i.ibb.co/pQwj2QF/zaralogo.png"
         ]
     },
     {
         "id": 5,
-        "brand_name": "Levis",
-        "brand_logo": "../src/assets/brandsImages/levilogo.png",
+        "brand_name": "Levi's",
+        "brand_logo": "https://i.ibb.co/Ps2w5KS/levilogo.png",
         "brand_image": [
-            "../src/assets/brandsImages/levi1.jpeg",
-            "../src/assets/brandsImages/levi2.jpeg",
-            "../src/assets/brandsImages/levi3.jpeg"
+            "https://i.ibb.co/VN9sbCS/levi1.jpg",
+            "https://i.ibb.co/sQGp7cS/levi3.jpg",
+            "https://i.ibb.co/Ps2w5KS/levilogo.png"
         ]
     },
     {
         "id": 6,
         "brand_name": "H&M",
-        "brand_logo": "../src/assets/brandsImages/h&mlogo.png",
+        "brand_logo": "https://i.ibb.co/pZj1j7W/h-mlogo.png",
         "brand_image": [
-            "../src/assets/brandsImages/h1.jpeg",
-            "../src/assets/brandsImages/h&m2.jpeg",
-            "../src/assets/brandsImages/h&m3.jpeg"
+            "https://i.ibb.co/dK77sWV/h1.jpg",
+            "https://i.ibb.co/87v1Fck/h-m3.jpg",
+            "https://i.ibb.co/6WYYfDm/h-m2.jpg"
         ]
     }
 ]

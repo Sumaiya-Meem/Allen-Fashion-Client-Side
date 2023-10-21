@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const DisplayBrand = ({ brand }) => {
-    // console.log(brand)
+    console.log(brand)
     const { brand_logo, brand_name } = brand;
-
+   console.log(brand_logo);
     return (
         <div className="w-[120px] lg:w-[200px] h-[120px] ">
             <Link to={`/products/${brand_name}`} key={brand.id}>

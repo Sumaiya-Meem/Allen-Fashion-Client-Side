@@ -21,7 +21,7 @@ const ProductDetails = () => {
     console.log(products);
 
     const handleCart=()=>{
-        fetch('http://localhost:5000/addCart', {
+        fetch('https://fashion-website-server-jx5pf6k71-meems-projects.vercel.app/addCart', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

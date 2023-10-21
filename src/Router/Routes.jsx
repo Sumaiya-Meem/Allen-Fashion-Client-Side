@@ -32,24 +32,24 @@ const router = createBrowserRouter([
         {
             path: "/myCarts",
             element: <PrivateRoute><MyCarts></MyCarts></PrivateRoute>,
-            loader:()=>fetch('http://localhost:5000/addCart')
+            loader:()=>fetch('https://fashion-website-server-jx5pf6k71-meems-projects.vercel.app/addCart')
   
         },
         {
             path: "/products/:brand_name",
             element: <DisplayBrandProducts></DisplayBrandProducts>,
-            loader:()=>fetch('http://localhost:5000/addproducts')
+            loader:()=>fetch('https://fashion-website-server-jx5pf6k71-meems-projects.vercel.app/addproducts')
         },
         {
                 path:"/detailsProducts/:id",
                 element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/addproducts/${params.id}`)
+                loader:({params})=>fetch(`https://fashion-website-server-jx5pf6k71-meems-projects.vercel.app/addproducts/${params.id}`)
 
         },
         {
           path:'/updateProduct/:id',
           element:<PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/addproducts/${params.id}`)
+          loader:({params})=>fetch(`https://fashion-website-server-jx5pf6k71-meems-projects.vercel.app/addproducts/${params.id}`)
         },
         {
           path: "/login",

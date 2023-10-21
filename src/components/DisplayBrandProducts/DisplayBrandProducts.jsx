@@ -12,7 +12,7 @@ const DisplayBrandProducts = () => {
     
 
     useEffect(() => {
-        fetch('../../../public/brandsData.json')
+        fetch('/brandsData.json')
             .then(res => res.json())
             .then(data => {
                 setProductLocal(data);

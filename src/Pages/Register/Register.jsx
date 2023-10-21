@@ -35,7 +35,7 @@ const Register = () => {
                     displayName: name,
                     photoURL: image, 
                    })
-                   fetch('http://localhost:5000/user', {
+                   fetch('https://fashion-website-server-jx5pf6k71-meems-projects.vercel.app//user', {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",

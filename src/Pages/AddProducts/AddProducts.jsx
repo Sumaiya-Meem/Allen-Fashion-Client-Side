@@ -19,7 +19,7 @@ const AddProducts = () => {
         }
         // console.log(products)
         
-        fetch('http://localhost:5000/addproducts', {
+        fetch('https://fashion-website-server-jx5pf6k71-meems-projects.vercel.app/addproducts', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
