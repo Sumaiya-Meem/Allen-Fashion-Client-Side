@@ -12,7 +12,7 @@ const Review = () => {
     // console.log(clientReview)
 
     return (
-        <div className="mt-10 px-0 lg:px-8 mb-8">
+        <div className="mt-10 px-0 lg:px-8">
             <h1 className="text-center text-3xl font-semibold mb-10"> Clients Says</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 shadow-md mx-4">
                 {

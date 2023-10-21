@@ -14,7 +14,7 @@ const Footer = () => {
 
     </>
     return (
-        <div className="mt-6 ">
+        <div className="">
             <div className="hero " style={{ backgroundImage: `url(${footerImg})` }}>
                 <div className="hero-overlay bg-opacity-80"></div>
                 <div className="hero-content text-center text-neutral-content">

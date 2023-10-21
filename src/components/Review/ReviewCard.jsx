@@ -7,7 +7,7 @@ const ReviewCard = ({reviews}) => {
 
     
     return (
-        <div className="bg-[#f2ddd8] rounded-lg p-2 ">
+        <div className="bg-[#d3f3ee] rounded-lg p-2 ">
             <div className='flex gap-3'>
                 <img src={image} alt=""  className="w-16 h-16 rounded-full"/>
                 <div className='flex gap-5'>
@@ -17,7 +17,7 @@ const ReviewCard = ({reviews}) => {
                   </div>
                 </div>
             </div>
-           <div className='flex justify-end text-[#41b497]'> <h4> -{name}</h4></div>
+           <div className='flex justify-end text-[#39a489] font-semibold'> <h4> -{name}</h4></div>
             
         </div>
     );

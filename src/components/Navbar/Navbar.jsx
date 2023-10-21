@@ -1,19 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import logoImg from "../../assets/logo.avif"
 import { AuthContext } from "../../Context/AuthProvider";
-import { useContext, useState} from "react";
+import { useContext} from "react";
 
 
 const Navbar = () => {
   const { user, userLogOut } = useContext(AuthContext);
   // console.log(user);
-  const[theme,setTheme]=useState('light-theme');
-
-  const handleToggle =()=>{
-    alert('click');
-     theme=='dark-theme' ? setTheme('light-theme'):setTheme('dark-theme');  
-     console.log(theme)
-  }
   
 
   const handleLogOut = () => {
@@ -62,7 +55,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <div className="flex gap-3 flex-col md:flex-row ml-16 lg:ml-10">
+        <div className="flex gap-3 flex-col md:flex-row ml-24 lg:ml-10">
           {
             user ?
               <>
@@ -87,11 +80,6 @@ const Navbar = () => {
                 <Link to="/register"><button className="btn  btn-outline btn-info text-base ml-3 ">Register</button></Link>
               </>
           }
-
-
-
-          <button onClick={handleToggle} className="btn text-[#1dd1a1] text-lg capitalize bg-white font-semibold">Dark</button>
-
 
         </div>
       </div>
