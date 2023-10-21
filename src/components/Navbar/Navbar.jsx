@@ -1,12 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import logoImg from "../../assets/logo.avif"
 import { AuthContext } from "../../Context/AuthProvider";
-import { useContext} from "react";
+import { useContext, useState} from "react";
 
 
 const Navbar = () => {
   const { user, userLogOut } = useContext(AuthContext);
   // console.log(user);
+  const[theme,setTheme]=useState('light-theme');
+
+  const handleToggle =()=>{
+    alert('click');
+     theme=='dark-theme' ? setTheme('light-theme'):setTheme('dark-theme');  
+     console.log(theme)
+  }
+  
 
   const handleLogOut = () => {
     userLogOut()
@@ -82,7 +90,7 @@ const Navbar = () => {
 
 
 
-          <button  className="btn text-[#1dd1a1] text-lg capitalize bg-white font-semibold">Dark</button>
+          <button onClick={handleToggle} className="btn text-[#1dd1a1] text-lg capitalize bg-white font-semibold">Dark</button>
 
 
         </div>

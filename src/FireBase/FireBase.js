@@ -3,14 +3,15 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+console.log(import.meta.env.VITE_PASS)
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBZFl4UJlfotJ0W3_Ohv3Iw2tlaa7evZdE",
-  authDomain: "fashion-website-39a8c.firebaseapp.com",
-  projectId: "fashion-website-39a8c",
-  storageBucket: "fashion-website-39a8c.appspot.com",
-  messagingSenderId: "318503156550",
-  appId: "1:318503156550:web:784c5f93f0ae89d26f0347"
+  apiKey:import.meta.env.VITE_APIKEY,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN,
+  projectId:import.meta.env.VITE_PROJECTID,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
+  appId:import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
