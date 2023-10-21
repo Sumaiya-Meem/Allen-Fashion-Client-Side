@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/xXcx8Tj/client1.jpg",
+      "review": "I've always trusted ALLEN to bring the latest trends to my wardrobe. The selection of brands is exceptional, and the quality is unmatched.",
+      "name": "Michael Smith"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/74hW4SL/client2.jpg",
+      "review": "I love the convenience of shopping at ALLEN. They make it easy to find the perfect fashion pieces from my favorite brands, like Gucci and Nike.",
+      "name": "Sarah Johnson "
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/4tTYghB/client3.jpg",
+      "review": "As a fashion enthusiast, ALLEN is my go-to destination. Their collection of brands, including Zara and Adidas, ensures I'm always on-trend.",
+      "name": "Emily Turner"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/1sdXjBN/client4.jpg",
+      "review": "The variety of products offered by ALLEN is outstanding. I've found great pieces from Levi's and more. Excellent service!",
+      "name": "David Roberts"
+    }
+  ]
